@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraising for Sitio Bebe</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5dc; /* Beige background */
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: background-color 1s; /* Transition for background color */
+        }
+
+        .container {
+            text-align: center;
+            color: black; /* Ensure text is visible */
+            max-width: 800px;
+            z-index: 10; /* Ensure text is above flowers */
+            position: relative;
+            background: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 1; /* Start fully visible */
+            transition: opacity 1s; /* Transition for fading effect */
+            display: none; /* Initially hide all pages */
+        }
+
+        .active {
+            display: block; /* Show only the active page */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* Dripping Flower Animation */
+        .flower {
+            position: absolute;
+            width: 40px;
+            top: 10px;
+            z-index: 1; /* Ensure flowers are in the background */
+            animation: drip 2s infinite alternate;
+        }
+
+        @keyframes drip {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+        }
+
+        /* Flower Positions */
+        .flower:nth-child(1) { left: 5%; }
+        .flower:nth-child(2) { left: 15%; }
+        .flower:nth-child(3) { left: 25%; }
+        .flower:nth-child(4) { left: 35%; }
+        .flower:nth-child(5) { left: 45%; }
+        .flower:nth-child(6) { left: 55%; }
+        .flower:nth-child(7) { left: 65%; }
+        .flower:nth-child(8) { left: 75%; }
+        .flower:nth-child(9) { left: 85%; }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #1E88E5;
+            background-color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.05);
+        }
+
+        /* Additional styling for group description */
+        .group-description {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: black; /* Dark text */
+        }
+
+        /* Magic transition effect */
+        .magic-transition {
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 9 Dripping Flowers -->
+    <!-- Flower 1 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 2 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 3 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 4 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 5 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 6 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 7 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 8 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+    <!-- Flower 9 -->
+    <svg class="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="pink" d="M12 2C10.34 2 9 3.34 9 5c0 1.03.58 2.18 1.5 3.1C10.09 9.67 9 11.29 9 13c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.71-1.09-3.33-2.5-4.9C14.42 7.18 15 6.03 15 5c0-1.66-1.34-3-3-3z"/>
+    </svg>
+
+    <!-- Container for content -->
+    <div class="container active" id="page1">
+        <h1>Help Fundraise for Sitio Bebe!</h1>
+        <p>Your support can make a big difference for the community in Sitio Bebe. Every contribution goes towards improving living conditions, providing essential resources, and creating a better future.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page2">
+        <h2>Chosen Category</h2>
+        <p>We specifically chose the "Educational" category as it aligns with our objective to create content that is informative, enlightening, and inspirational. By focusing on this category, we aim to impart knowledge and insights that can positively impact the lives of our audience, especially students. We believe that our content not only serves the purpose of creation but also contributes valuable information that can benefit and empower our viewers.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page3">
+        <h2>Target Audience</h2>
+        <p>Since our content aims to help the unfortunate, we think that it would be best if our target audience would be teens, people who are willing to help the unfortunate, and sponsors or brands that are willing enough to help the unfortunate. Teens will be such a great help to our content since they are mostly the ones that like to speak up for things. With today's teenagers, so many young people create content on TikTok and YouTube. With their help and influence, we can expand our content more.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page4">
+        <h2>Needs</h2>
+        <ul>
+            <li>Camera</li>
+            <li>Microphone</li>
+            <li>Laptop/Cellphone</li>
+            <li>Editing app</li>
+            <li>Internet</li>
+            <li>Online Design Platform (example: Canva)</li>
+        </ul>
+        <p>This will help us to fulfill our need for building our Educational Video and also help us to educate people.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page5">
+        <h2>YouTube Channel Setup</h2>
+        <p>Choosing a compelling channel name that reflects our mission. Creating a visually appealing channel banner and profile picture. Writing a clear and concise channel description that outlines our goals and target audience.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page6">
+        <h2>Content Creation</h2>
+        <p>Starting brainstorming specific video ideas based on the content types we discussed. Plan out our video scripts and gather any necessary resources. Recording our initial videos and experiment with editing styles.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page7">
+        <h2>Marketing and Promotion</h2>
+        <p>Creating a social media strategy to promote our channel. Sharing our videos on relevant online communities and forums.</p>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <div class="container" id="page8">
+        <h2>Why We Need to Address?</h2>
+        <p>In Sitio Bebe, we need to address the lack of access to clean water, healthcare professionals, and essential health resources. Our YouTube channel can become a platform for raising awareness, sharing stories of resilience, and inspiring viewers to donate to support these needs. We can create videos showcasing the challenges faced by the community, highlighting the impact of clean water access and healthcare, and providing practical ways for viewers to contribute. By focusing on empathy and action, we can empower viewers to make a difference for Sitio Bebe.</p>
+        <button class="btn" id="donateBtn">Donate Now</button>
+    </div>
+
+    <p class="group-description">Organized by the Local Support Group for Sitio Bebe</p>
+
+    <audio id="clickSound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+    <audio id="transitionSound" src="https://www.soundjay.com/button/sounds/button-09.mp3" preload="auto"></audio>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 8; // Total number of pages
+        const containers = document.querySelectorAll('.container');
+
+        document.querySelectorAll('#nextBtn').forEach((button) => {
+            button.addEventListener('click', function() {
+                const clickSound = document.getElementById("clickSound");
+                const transitionSound = document.getElementById("transitionSound");
+                transitionSound.play(); // Play transition sound
+                
+                containers[currentPage - 1].classList.add("magic-transition"); // Add transition effect
+
+                // After the transition, change page
+                setTimeout(function() {
+                    clickSound.play(); // Play button click sound
+                    containers[currentPage - 1].classList.remove("active");
+                    currentPage++;
+                    if (currentPage <= totalPages) {
+                        containers[currentPage - 1].classList.add("active");
+                    } else {
+                        alert("Thank you for your interest in donating!");
+                        currentPage = 1; // Reset to first page
+                        containers.forEach(container => container.classList.remove("active")); // Hide all pages
+                        containers[0].classList.add("active"); // Show first page
+                    }
+                    containers[currentPage - 2].classList.remove("magic-transition"); // Remove transition class
+                }, 1000); // Wait for 1 second before transitioning
+            });
+        });
+
+        // Event listener for the Donate button on the last page
+        document.getElementById("donateBtn").addEventListener("click", function() {
+            alert("Thank you for your interest in donating!");
+        });
+    </script>
+</body>
+</html>
